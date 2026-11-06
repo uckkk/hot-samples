@@ -24,6 +24,7 @@ h2{font-family:"Songti SC","Noto Serif SC",serif;font-size:21px;font-weight:600;
 .card .catpill.food{background:rgba(158,84,32,.88)}
 .card .catpill.pick{background:rgba(38,84,124,.88)}
 .card .catpill.clean{background:rgba(30,110,92,.88)}
+.card .catpill.alert{background:rgba(150,44,36,.9)}
 .card .catpill.misc{background:rgba(90,86,76,.88)}
 .skillbox{border:1px solid #EDEAE2;border-radius:3px;padding:16px 18px;margin-top:20px;background:#fff}
 .skillhead{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;font-weight:600;font-size:14.5px}
@@ -66,7 +67,7 @@ h2{font-family:"Songti SC","Noto Serif SC",serif;font-size:21px;font-weight:600;
 <div id="home">
 <h2>样本</h2>
 <p class="sub">按转发＋收藏从高到低排列 · 数据为收录当日公开页面读数 · 卡片左上角是固定编号，沟通对齐报编号即可</p>
-<div class="chips"><button class="chip on" onclick="filterCat('全部',this)">全部</button><button class="chip" onclick="filterCat('食材烹饪',this)">食材烹饪 3</button><button class="chip" onclick="filterCat('清洁日用',this)">清洁日用 1</button><button class="chip" onclick="filterCat('选购营养',this)">选购营养 3</button></div>
+<div class="chips"><button class="chip on" onclick="filterCat('全部',this)">全部</button><button class="chip" onclick="filterCat('食材烹饪',this)">食材烹饪 3</button><button class="chip" onclick="filterCat('清洁日用',this)">清洁日用 1</button><button class="chip" onclick="filterCat('健康警示',this)">健康警示 1</button><button class="chip" onclick="filterCat('选购营养',this)">选购营养 3</button></div>
 <div class="grid">
 <article class="card" data-id="shenhua" data-cat="食材烹饪">
   <div class="thumb" onclick="location.hash='s-shenhua'">
@@ -103,6 +104,15 @@ h2{font-family:"Songti SC","Noto Serif SC",serif;font-size:21px;font-weight:600;
   </div>
   <div class="cmeta">AIGC伊尔 · 2026-10-29 · 食材烹饪</div>
   <div class="cdata">转发 10万+ · 收藏 8.1万 · 点赞 7.0万 · 评论 3186</div>
+</article>
+<article class="card" data-id="daxiang" data-cat="健康警示">
+  <div class="thumb" onclick="location.hash='s-daxiang'">
+    <video muted loop playsinline preload="none" poster="frames/daxiang-a.jpg" data-src="clips/daxiang.mp4"></video>
+    <div class="badges"><span class="no">编号 008</span><span class="catpill alert">健康警示</span></div>
+    <div class="playhint">点击看详情</div>
+  </div>
+  <div class="cmeta">大象新闻 · 2026-11-05 · 健康警示</div>
+  <div class="cdata">转发 10万+ · 收藏 4.5万 · 点赞 4.9万 · 评论 2598</div>
 </article>
 <article class="card" data-id="wanwu" data-cat="选购营养">
   <div class="thumb" onclick="location.hash='s-wanwu'">
@@ -155,6 +165,7 @@ h2{font-family:"Songti SC","Noto Serif SC",serif;font-size:21px;font-weight:600;
     <li><em>钩子</em>第一句先否定万能做法：料酒不是万能的，五种肉去腥根本不是一回事。</li>
     <li><em>结构</em>双声线对答，一菜一问；五种肉逐项走误区、藏点、本命解法加时机四步，平均 1.56 秒一刀，全片 178 处文字标注、118 记音效卡在标注出现瞬间。</li>
     <li><em>收尾</em>末帧五种肉完整对照总表，配升华句与「转给掌勺的人」的转存指令。</li>
+    
   </ul>
   <div class="reuse">可套用：否定万能做法＋数字个对象的选题公式；逐项四步；末帧总表。</div>
   <div class="skillbox">
@@ -192,6 +203,7 @@ h2{font-family:"Songti SC","Noto Serif SC",serif;font-size:21px;font-weight:600;
     <li><em>钩子</em>「谁还在费劲搓海鲜」先点错误做法，再许诺连壳缝都清干净。</li>
     <li><em>结构</em>拟人化海鲜动画（豆包生成），59 秒五招：花甲吐沙、虾抽线、生蚝刷洗、皮皮虾清缝、鱼去腥，一招一镜、零废话。</li>
     <li><em>收尾</em>清单走完即结束，靠「直接抄作业」的定位促收藏转发；评论仅 628，是典型的存了就走型爆款。</li>
+    
   </ul>
   <div class="reuse">可套用：短清单密度打法；拟人食材动画形式；抄作业式标题。</div>
   <div class="skillbox">
@@ -229,6 +241,7 @@ h2{font-family:"Songti SC","Noto Serif SC",serif;font-size:21px;font-weight:600;
     <li><em>钩子</em>污渍拟人化自报家门：「我是铁锅上的锈渍」，先立难题再逐个破解。</li>
     <li><em>结构</em>AI 生成画面，污渍拟人化逐个登场自述，每种污渍配一招：土豆切开蘸盐擦锈、白醋加水煮开去垢、小苏打加洗洁精对付焦渍，一物一招、51 秒走完清单。</li>
     <li><em>收尾</em>清单走完即收，评论仅 1052，是典型的存了转了就走型爆款。</li>
+    
   </ul>
   <div class="reuse">可套用：拟人化难题自述＋一物一招清单；短清单密度打法。</div>
   <div class="skillbox">
@@ -266,6 +279,7 @@ h2{font-family:"Songti SC","Noto Serif SC",serif;font-size:21px;font-weight:600;
     <li><em>钩子</em>「十种食材要谨慎处理」用数字加风险词开场，人工智能生成账号照样封顶转发。</li>
     <li><em>结构</em>十个对象逐项过，每项给处理要点；长时长靠对象数量撑完播。</li>
     <li><em>收尾</em>清单收尾，收藏 8.1 万说明观众把它当工具页存。</li>
+    
   </ul>
   <div class="reuse">可套用：数字＋风险词标题；十项清单长视频结构。</div>
   <div class="skillbox">
@@ -293,6 +307,46 @@ h2{font-family:"Songti SC","Noto Serif SC",serif;font-size:21px;font-weight:600;
   </div>
   <div class="imgs"><img loading="lazy" src="frames/yier-a.jpg" alt=""><img loading="lazy" src="frames/yier-b.jpg" alt=""></div>
 </section>
+<section class="detail" id="s-daxiang">
+  <a class="back" href="#">← 返回样本列表</a>
+  <div class="meta">编号 008 · 大象新闻 · 2026-11-05 · 40秒 · 健康警示 · 竖屏新闻口播</div>
+  <h3>西柚不能与85种药物同服，其中43种会致严重副作用</h3>
+  <video controls playsinline preload="none" poster="frames/daxiang-a.jpg" data-src="clips/daxiang.mp4"></video>
+  <div class="stats"><span class="stat"><b>10万+</b>转发</span><span class="stat"><b>4.5万</b>收藏</span><span class="stat"><b>4.9万</b>点赞</span><span class="stat"><b>2598</b>评论</span></div>
+  <ul class="break">
+    <li><em>钩子</em>开场即甩权威数字大标题压屏：85 种药物不能与西柚同服、其中 43 种会致严重副作用，再逐类点名降压药、降脂药、安眠药、部分抗过敏药。</li>
+    <li><em>结构</em>竖屏新闻口播：真人主播加资料画面，全程大标题压屏，40 秒逐类列举受影响药物；靠「转给吃药的家人」把转发顶到封顶、收藏 4.5 万。</li>
+    <li><em>收尾</em>短促收尾、警示落版；发布次日即爆，靠时效与利他转发。</li>
+    <li><em>红线</em>只转述权威公开口径（新闻机构、药品说明书、监管机构发布），不给个体用药建议，不做诊疗判断；涉及具体药物先核说明书与权威来源。</li>
+  </ul>
+  <div class="reuse">可套用：权威数字开场＋大标题压屏＋利他转存动机；健康警示类只学信息结构与传播打法。</div>
+  <div class="skillbox">
+    <div class="skillhead"><span>同款技能包 · 编号 008</span><span><button class="copybtn" onclick="copySkill('daxiang',this)">一键复制技能</button> <a class="skilllink" href="skills/008-daxiang.md" target="_blank">技能链接</a></span></div>
+    <pre class="skilltext" id="skill-daxiang">同款结构技能包 · 编号 008
+样本：大象新闻《西柚不能与85种药物同服，其中43种会致严重副作用》（2026-11-05，40秒）
+分类：健康警示 · 形式：竖屏新闻口播
+实测数据：转发 10万+ · 收藏 4.5万 · 点赞 4.9万 · 评论 2598（视频号播放页读数）
+
+你是一个视频创作智能体。用户给你一个新选题时，严格按这条已验证样本的结构生成同款视频：只学结构与节奏，不搬运原片画面、台词与结论原文。
+
+钩子公式：开场即甩权威数字大标题压屏：85 种药物不能与西柚同服、其中 43 种会致严重副作用，再逐类点名降压药、降脂药、安眠药、部分抗过敏药。
+结构骨架：竖屏新闻口播：真人主播加资料画面，全程大标题压屏，40 秒逐类列举受影响药物；靠「转给吃药的家人」把转发顶到封顶、收藏 4.5 万。
+收尾打法：短促收尾、警示落版；发布次日即爆，靠时效与利他转发。
+可直接套用：权威数字开场＋大标题压屏＋利他转存动机；健康警示类只学信息结构与传播打法。
+
+本条红线：只转述权威公开口径（新闻机构、药品说明书、监管机构发布），不给个体用药建议，不做诊疗判断；涉及具体药物先核说明书与权威来源。
+
+通用硬规则（全部样本共同打法）：
+1. 选题先否定一个万能做法，再给数字个对象，清单可数、可存。
+2. 逐项走固定节奏，观众能预判下一步；每项给可执行解法，不空讲道理。
+3. 同步感靠文字标注加音效卡点：标注出现的那一帧必须有音效落点。
+4. 结尾给完整对照或结论收口，再给一句明确的转存理由。
+5. 数据与结论只用可核实来源，不编数字、不下医疗功效结论。
+交付前自查：钩子前三秒是否成立、逐项节奏是否统一、末帧收口是否齐全、音画字幕是否逐段对位。</pre>
+    <p class="skillnote">用法：点一键复制，把全文粘给任何智能体；或把技能链接发给它，让它打开链接按技能要求生成同款结构视频。</p>
+  </div>
+  <div class="imgs"><img loading="lazy" src="frames/daxiang-a.jpg" alt=""><img loading="lazy" src="frames/daxiang-b.jpg" alt=""></div>
+</section>
 <section class="detail" id="s-wanwu">
   <a class="back" href="#">← 返回样本列表</a>
   <div class="meta">编号 007 · 万物科普君啊 · 2026-10-26 · 297秒 · 选购营养 · 横屏双人短剧</div>
@@ -303,6 +357,7 @@ h2{font-family:"Songti SC","Noto Serif SC",serif;font-size:21px;font-weight:600;
     <li><em>钩子</em>标题直接反消费主义：海鲜营养排行，贵的未必补，先推翻「贵就等于补」。</li>
     <li><em>结构</em>横屏双人短剧（外星人加年轻人），逐项核查鱿鱼、鳕鱼、大型掠食鱼、三文鱼、青花鱼的营养与风险（如汞含量），排名型长视频，靠避坑立场驱动转发封顶。</li>
     <li><em>收尾</em>排名给完收口，立场落回「贵的未必补」，给观众一个转给家人避坑的理由。</li>
+    
   </ul>
   <div class="reuse">可套用：反消费主义切入＋逐项核查排名；省钱避坑选题角度；横屏双人短剧包装。</div>
   <div class="skillbox">
@@ -340,6 +395,7 @@ h2{font-family:"Songti SC","Noto Serif SC",serif;font-size:21px;font-weight:600;
     <li><em>钩子</em>标题先判错「你吃了几十年的食用油，大概都选错了」，开场超市挑油第一句就是「第一步就挑反了」。</li>
     <li><em>结构</em>横屏生成短剧：外星人加年轻人双人演，超市场景逐种油纠错，戏剧化排名讲脂肪酸搭配与控油温；转发是点赞六倍多，极端转发驱动。</li>
     <li><em>收尾</em>结尾拉回长期账：「可一吃就是20年」，用时间尺度压出转发理由。</li>
+    
   </ul>
   <div class="reuse">可套用：判错式标题＋横屏双人短剧排名；转给家人看的选题角度。</div>
   <div class="skillbox">
@@ -377,6 +433,7 @@ h2{font-family:"Songti SC","Noto Serif SC",serif;font-size:21px;font-weight:600;
     <li><em>钩子</em>一个问题开场：哪种肉营养最高，排名悬念拉满。</li>
     <li><em>结构</em>生成式双人对话，各类肉逐个对比排名；转发是点赞的五倍多，靠「发给家人看」驱动。</li>
     <li><em>收尾</em>给出排名结论收尾（其中医疗建议段不可仿）。</li>
+    
   </ul>
   <div class="reuse">可套用：排名＋对照结构；问题式标题。医疗结论类说法不套用。</div>
   <div class="skillbox">
