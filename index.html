@@ -18,6 +18,13 @@ h2{font-family:"Songti SC","Noto Serif SC",serif;font-size:21px;font-weight:600;
 .card .thumb{position:relative;cursor:pointer;background:#000;border-radius:3px;overflow:hidden}
 .card video{width:100%;height:340px;object-fit:cover;display:block}
 .playhint{position:absolute;right:10px;bottom:10px;background:rgba(0,0,0,.55);color:#fff;font-size:12px;padding:4px 10px;border-radius:999px;opacity:0;transition:opacity .2s}
+.card .no{position:absolute;left:10px;top:10px;background:rgba(0,0,0,.62);color:#fff;font-size:12px;letter-spacing:.08em;padding:4px 10px;border-radius:999px}
+.skillbox{border:1px solid #EDEAE2;border-radius:3px;padding:16px 18px;margin-top:20px;background:#fff}
+.skillhead{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;font-weight:600;font-size:14.5px}
+.copybtn{background:#1A1A1A;color:#fff;border:0;border-radius:999px;padding:6px 14px;font-size:12.5px;cursor:pointer}
+.skilllink{color:#1A1A1A;font-size:12.5px}
+.skilltext{white-space:pre-wrap;word-break:break-word;font-family:inherit;font-size:12.5px;line-height:1.75;color:#33312B;max-height:230px;overflow:auto;margin:14px 0 8px}
+.skillnote{color:#8A8578;font-size:12.5px;line-height:1.7;margin:0}
 .card .thumb:hover .playhint{opacity:1}
 .cmeta{color:#8A8578;font-size:12.5px;letter-spacing:.06em;margin-top:12px}
 .cdata{font-size:14.5px;margin-top:5px;color:#1A1A1A;font-weight:500}
@@ -49,11 +56,12 @@ h2{font-family:"Songti SC","Noto Serif SC",serif;font-size:21px;font-weight:600;
 <div class="wrap">
 <div id="home">
 <h2>样本</h2>
-<p class="sub">按转发＋收藏从高到低排列 · 数据为收录当日公开页面读数</p>
+<p class="sub">按转发＋收藏从高到低排列 · 数据为收录当日公开页面读数 · 卡片左上角是固定编号，沟通对齐报编号即可</p>
 <div class="grid">
 <article class="card" data-id="shenhua">
   <div class="thumb" onclick="location.hash='s-shenhua'">
     <video muted loop playsinline preload="none" poster="frames/shenhua-a.jpg" data-src="clips/shenhua.mp4"></video>
+    <div class="no">编号 001</div>
     <div class="playhint">点击看详情</div>
   </div>
   <div class="cmeta">神话研究所 · 2026-10-18</div>
@@ -62,6 +70,7 @@ h2{font-family:"Songti SC","Noto Serif SC",serif;font-size:21px;font-weight:600;
 <article class="card" data-id="tiantian">
   <div class="thumb" onclick="location.hash='s-tiantian'">
     <video muted loop playsinline preload="none" poster="frames/tiantian-a.jpg" data-src="clips/tiantian.mp4"></video>
+    <div class="no">编号 002</div>
     <div class="playhint">点击看详情</div>
   </div>
   <div class="cmeta">天天科普一下 · 2026-11-01</div>
@@ -70,6 +79,7 @@ h2{font-family:"Songti SC","Noto Serif SC",serif;font-size:21px;font-weight:600;
 <article class="card" data-id="kepu">
   <div class="thumb" onclick="location.hash='s-kepu'">
     <video muted loop playsinline preload="none" poster="frames/kepu-a.jpg" data-src="clips/kepu.mp4"></video>
+    <div class="no">编号 005</div>
     <div class="playhint">点击看详情</div>
   </div>
   <div class="cmeta">科普来了 · 2026-06-24</div>
@@ -78,6 +88,7 @@ h2{font-family:"Songti SC","Noto Serif SC",serif;font-size:21px;font-weight:600;
 <article class="card" data-id="yier">
   <div class="thumb" onclick="location.hash='s-yier'">
     <video muted loop playsinline preload="none" poster="frames/yier-a.jpg" data-src="clips/yier.mp4"></video>
+    <div class="no">编号 003</div>
     <div class="playhint">点击看详情</div>
   </div>
   <div class="cmeta">AIGC伊尔 · 2026-10-29</div>
@@ -86,6 +97,7 @@ h2{font-family:"Songti SC","Noto Serif SC",serif;font-size:21px;font-weight:600;
 <article class="card" data-id="zhengjing">
   <div class="thumb" onclick="location.hash='s-zhengjing'">
     <video muted loop playsinline preload="none" poster="frames/zhengjing-a.jpg" data-src="clips/zhengjing.mp4"></video>
+    <div class="no">编号 006</div>
     <div class="playhint">点击看详情</div>
   </div>
   <div class="cmeta">正经科普君 · 2026-10-22</div>
@@ -94,6 +106,7 @@ h2{font-family:"Songti SC","Noto Serif SC",serif;font-size:21px;font-weight:600;
 <article class="card" data-id="juke">
   <div class="thumb" onclick="location.hash='s-juke'">
     <video muted loop playsinline preload="none" poster="frames/juke-a.jpg" data-src="clips/juke.mp4"></video>
+    <div class="no">编号 004</div>
     <div class="playhint">点击看详情</div>
   </div>
   <div class="cmeta">荒诞科普橘 · 2026-10-29</div>
@@ -115,7 +128,7 @@ h2{font-family:"Songti SC","Noto Serif SC",serif;font-size:21px;font-weight:600;
 
 <section class="detail" id="s-shenhua">
   <a class="back" href="#">← 返回样本列表</a>
-  <div class="meta">神话研究所 · 2026-10-18 · 203秒</div>
+  <div class="meta">编号 001 · 神话研究所 · 2026-10-18 · 203秒</div>
   <h3>料酒不是万能的，五种肉的去腥香料其实不一样</h3>
   <video controls playsinline preload="none" poster="frames/shenhua-a.jpg" data-src="clips/shenhua.mp4"></video>
   <div class="stats"><span class="stat"><b>10万+</b>转发</span><span class="stat"><b>10万+</b>收藏</span><span class="stat"><b>10万+</b>点赞</span><span class="stat"><b>8473</b>评论</span></div>
@@ -125,11 +138,33 @@ h2{font-family:"Songti SC","Noto Serif SC",serif;font-size:21px;font-weight:600;
     <li><em>收尾</em>末帧五种肉完整对照总表，配升华句与「转给掌勺的人」的转存指令。</li>
   </ul>
   <div class="reuse">可套用：否定万能做法＋数字个对象的选题公式；逐项四步；末帧总表。</div>
+  <div class="skillbox">
+    <div class="skillhead"><span>同款技能包 · 编号 001</span><span><button class="copybtn" onclick="copySkill('shenhua',this)">一键复制技能</button> <a class="skilllink" href="skills/001-shenhua.md" target="_blank">技能链接</a></span></div>
+    <pre class="skilltext" id="skill-shenhua">同款结构技能包 · 编号 001
+样本：神话研究所《料酒不是万能的，五种肉的去腥香料其实不一样》（2026-10-18，203秒）
+实测数据：转发 10万+ · 收藏 10万+ · 点赞 10万+ · 评论 8473（视频号播放页读数）
+
+你是一个视频创作智能体。用户给你一个新选题时，严格按这条已验证样本的结构生成同款视频：只学结构与节奏，不搬运原片画面、台词与结论原文。
+
+钩子公式：第一句先否定万能做法：料酒不是万能的，五种肉去腥根本不是一回事。
+结构骨架：双声线对答，一菜一问；五种肉逐项走误区、藏点、本命解法加时机四步，平均 1.56 秒一刀，全片 178 处文字标注、118 记音效卡在标注出现瞬间。
+收尾打法：末帧五种肉完整对照总表，配升华句与「转给掌勺的人」的转存指令。
+可直接套用：否定万能做法＋数字个对象的选题公式；逐项四步；末帧总表。
+
+通用硬规则（全部样本共同打法）：
+1. 选题先否定一个万能做法，再给数字个对象，清单可数、可存。
+2. 逐项走固定节奏，观众能预判下一步；每项给可执行解法，不空讲道理。
+3. 同步感靠文字标注加音效卡点：标注出现的那一帧必须有音效落点。
+4. 结尾给完整对照或结论收口，再给一句明确的转存理由。
+5. 数据与结论只用可核实来源，不编数字、不下医疗功效结论。
+交付前自查：钩子前三秒是否成立、逐项节奏是否统一、末帧收口是否齐全、音画字幕是否逐段对位。</pre>
+    <p class="skillnote">用法：点一键复制，把全文粘给任何智能体；或把技能链接发给它，让它打开链接按技能要求生成同款结构视频。</p>
+  </div>
   <div class="imgs"><img loading="lazy" src="frames/shenhua-a.jpg" alt=""><img loading="lazy" src="frames/shenhua-b.jpg" alt=""></div>
 </section>
 <section class="detail" id="s-tiantian">
   <a class="back" href="#">← 返回样本列表</a>
-  <div class="meta">天天科普一下 · 2026-11-01 · 59秒</div>
+  <div class="meta">编号 002 · 天天科普一下 · 2026-11-01 · 59秒</div>
   <h3>海鲜清洗有妙招，谁还在费劲搓海鲜啊</h3>
   <video controls playsinline preload="none" poster="frames/tiantian-a.jpg" data-src="clips/tiantian.mp4"></video>
   <div class="stats"><span class="stat"><b>10万+</b>转发</span><span class="stat"><b>10万+</b>收藏</span><span class="stat"><b>10万+</b>点赞</span><span class="stat"><b>628</b>评论</span></div>
@@ -139,11 +174,33 @@ h2{font-family:"Songti SC","Noto Serif SC",serif;font-size:21px;font-weight:600;
     <li><em>收尾</em>清单走完即结束，靠「直接抄作业」的定位促收藏转发；评论仅 628，是典型的存了就走型爆款。</li>
   </ul>
   <div class="reuse">可套用：短清单密度打法；拟人食材动画形式；抄作业式标题。</div>
+  <div class="skillbox">
+    <div class="skillhead"><span>同款技能包 · 编号 002</span><span><button class="copybtn" onclick="copySkill('tiantian',this)">一键复制技能</button> <a class="skilllink" href="skills/002-tiantian.md" target="_blank">技能链接</a></span></div>
+    <pre class="skilltext" id="skill-tiantian">同款结构技能包 · 编号 002
+样本：天天科普一下《海鲜清洗有妙招，谁还在费劲搓海鲜啊》（2026-11-01，59秒）
+实测数据：转发 10万+ · 收藏 10万+ · 点赞 10万+ · 评论 628（视频号播放页读数）
+
+你是一个视频创作智能体。用户给你一个新选题时，严格按这条已验证样本的结构生成同款视频：只学结构与节奏，不搬运原片画面、台词与结论原文。
+
+钩子公式：「谁还在费劲搓海鲜」先点错误做法，再许诺连壳缝都清干净。
+结构骨架：拟人化海鲜动画（豆包生成），59 秒五招：花甲吐沙、虾抽线、生蚝刷洗、皮皮虾清缝、鱼去腥，一招一镜、零废话。
+收尾打法：清单走完即结束，靠「直接抄作业」的定位促收藏转发；评论仅 628，是典型的存了就走型爆款。
+可直接套用：短清单密度打法；拟人食材动画形式；抄作业式标题。
+
+通用硬规则（全部样本共同打法）：
+1. 选题先否定一个万能做法，再给数字个对象，清单可数、可存。
+2. 逐项走固定节奏，观众能预判下一步；每项给可执行解法，不空讲道理。
+3. 同步感靠文字标注加音效卡点：标注出现的那一帧必须有音效落点。
+4. 结尾给完整对照或结论收口，再给一句明确的转存理由。
+5. 数据与结论只用可核实来源，不编数字、不下医疗功效结论。
+交付前自查：钩子前三秒是否成立、逐项节奏是否统一、末帧收口是否齐全、音画字幕是否逐段对位。</pre>
+    <p class="skillnote">用法：点一键复制，把全文粘给任何智能体；或把技能链接发给它，让它打开链接按技能要求生成同款结构视频。</p>
+  </div>
   <div class="imgs"><img loading="lazy" src="frames/tiantian-a.jpg" alt=""><img loading="lazy" src="frames/tiantian-b.jpg" alt=""></div>
 </section>
 <section class="detail" id="s-kepu">
   <a class="back" href="#">← 返回样本列表</a>
-  <div class="meta">科普来了 · 2026-06-24 · 51秒</div>
+  <div class="meta">编号 005 · 科普来了 · 2026-06-24 · 51秒</div>
   <h3>厨具污渍油垢清洁小技巧</h3>
   <video controls playsinline preload="none" poster="frames/kepu-a.jpg" data-src="clips/kepu.mp4"></video>
   <div class="stats"><span class="stat"><b>10万+</b>转发</span><span class="stat"><b>10万+</b>收藏</span><span class="stat"><b>10万+</b>点赞</span><span class="stat"><b>1052</b>评论</span></div>
@@ -153,11 +210,33 @@ h2{font-family:"Songti SC","Noto Serif SC",serif;font-size:21px;font-weight:600;
     <li><em>收尾</em>清单走完即收，评论仅 1052，是典型的存了转了就走型爆款。</li>
   </ul>
   <div class="reuse">可套用：拟人化难题自述＋一物一招清单；短清单密度打法。</div>
+  <div class="skillbox">
+    <div class="skillhead"><span>同款技能包 · 编号 005</span><span><button class="copybtn" onclick="copySkill('kepu',this)">一键复制技能</button> <a class="skilllink" href="skills/005-kepu.md" target="_blank">技能链接</a></span></div>
+    <pre class="skilltext" id="skill-kepu">同款结构技能包 · 编号 005
+样本：科普来了《厨具污渍油垢清洁小技巧》（2026-06-24，51秒）
+实测数据：转发 10万+ · 收藏 10万+ · 点赞 10万+ · 评论 1052（视频号播放页读数）
+
+你是一个视频创作智能体。用户给你一个新选题时，严格按这条已验证样本的结构生成同款视频：只学结构与节奏，不搬运原片画面、台词与结论原文。
+
+钩子公式：污渍拟人化自报家门：「我是铁锅上的锈渍」，先立难题再逐个破解。
+结构骨架：AI 生成画面，污渍拟人化逐个登场自述，每种污渍配一招：土豆切开蘸盐擦锈、白醋加水煮开去垢、小苏打加洗洁精对付焦渍，一物一招、51 秒走完清单。
+收尾打法：清单走完即收，评论仅 1052，是典型的存了转了就走型爆款。
+可直接套用：拟人化难题自述＋一物一招清单；短清单密度打法。
+
+通用硬规则（全部样本共同打法）：
+1. 选题先否定一个万能做法，再给数字个对象，清单可数、可存。
+2. 逐项走固定节奏，观众能预判下一步；每项给可执行解法，不空讲道理。
+3. 同步感靠文字标注加音效卡点：标注出现的那一帧必须有音效落点。
+4. 结尾给完整对照或结论收口，再给一句明确的转存理由。
+5. 数据与结论只用可核实来源，不编数字、不下医疗功效结论。
+交付前自查：钩子前三秒是否成立、逐项节奏是否统一、末帧收口是否齐全、音画字幕是否逐段对位。</pre>
+    <p class="skillnote">用法：点一键复制，把全文粘给任何智能体；或把技能链接发给它，让它打开链接按技能要求生成同款结构视频。</p>
+  </div>
   <div class="imgs"><img loading="lazy" src="frames/kepu-a.jpg" alt=""><img loading="lazy" src="frames/kepu-b.jpg" alt=""></div>
 </section>
 <section class="detail" id="s-yier">
   <a class="back" href="#">← 返回样本列表</a>
-  <div class="meta">AIGC伊尔 · 2026-10-29 · 288秒</div>
+  <div class="meta">编号 003 · AIGC伊尔 · 2026-10-29 · 288秒</div>
   <h3>这十种食材要谨慎处理！</h3>
   <video controls playsinline preload="none" poster="frames/yier-a.jpg" data-src="clips/yier.mp4"></video>
   <div class="stats"><span class="stat"><b>10万+</b>转发</span><span class="stat"><b>8.1万</b>收藏</span><span class="stat"><b>7.0万</b>点赞</span><span class="stat"><b>3186</b>评论</span></div>
@@ -167,11 +246,33 @@ h2{font-family:"Songti SC","Noto Serif SC",serif;font-size:21px;font-weight:600;
     <li><em>收尾</em>清单收尾，收藏 8.1 万说明观众把它当工具页存。</li>
   </ul>
   <div class="reuse">可套用：数字＋风险词标题；十项清单长视频结构。</div>
+  <div class="skillbox">
+    <div class="skillhead"><span>同款技能包 · 编号 003</span><span><button class="copybtn" onclick="copySkill('yier',this)">一键复制技能</button> <a class="skilllink" href="skills/003-yier.md" target="_blank">技能链接</a></span></div>
+    <pre class="skilltext" id="skill-yier">同款结构技能包 · 编号 003
+样本：AIGC伊尔《这十种食材要谨慎处理！》（2026-10-29，288秒）
+实测数据：转发 10万+ · 收藏 8.1万 · 点赞 7.0万 · 评论 3186（视频号播放页读数）
+
+你是一个视频创作智能体。用户给你一个新选题时，严格按这条已验证样本的结构生成同款视频：只学结构与节奏，不搬运原片画面、台词与结论原文。
+
+钩子公式：「十种食材要谨慎处理」用数字加风险词开场，人工智能生成账号照样封顶转发。
+结构骨架：十个对象逐项过，每项给处理要点；长时长靠对象数量撑完播。
+收尾打法：清单收尾，收藏 8.1 万说明观众把它当工具页存。
+可直接套用：数字＋风险词标题；十项清单长视频结构。
+
+通用硬规则（全部样本共同打法）：
+1. 选题先否定一个万能做法，再给数字个对象，清单可数、可存。
+2. 逐项走固定节奏，观众能预判下一步；每项给可执行解法，不空讲道理。
+3. 同步感靠文字标注加音效卡点：标注出现的那一帧必须有音效落点。
+4. 结尾给完整对照或结论收口，再给一句明确的转存理由。
+5. 数据与结论只用可核实来源，不编数字、不下医疗功效结论。
+交付前自查：钩子前三秒是否成立、逐项节奏是否统一、末帧收口是否齐全、音画字幕是否逐段对位。</pre>
+    <p class="skillnote">用法：点一键复制，把全文粘给任何智能体；或把技能链接发给它，让它打开链接按技能要求生成同款结构视频。</p>
+  </div>
   <div class="imgs"><img loading="lazy" src="frames/yier-a.jpg" alt=""><img loading="lazy" src="frames/yier-b.jpg" alt=""></div>
 </section>
 <section class="detail" id="s-zhengjing">
   <a class="back" href="#">← 返回样本列表</a>
-  <div class="meta">正经科普君 · 2026-10-22 · 275秒</div>
+  <div class="meta">编号 006 · 正经科普君 · 2026-10-22 · 275秒</div>
   <h3>你吃了几十年的食用油，大概都选错了！</h3>
   <video controls playsinline preload="none" poster="frames/zhengjing-a.jpg" data-src="clips/zhengjing.mp4"></video>
   <div class="stats"><span class="stat"><b>8.9万</b>转发</span><span class="stat"><b>8648</b>收藏</span><span class="stat"><b>1.4万</b>点赞</span><span class="stat"><b>1539</b>评论</span></div>
@@ -181,11 +282,33 @@ h2{font-family:"Songti SC","Noto Serif SC",serif;font-size:21px;font-weight:600;
     <li><em>收尾</em>结尾拉回长期账：「可一吃就是20年」，用时间尺度压出转发理由。</li>
   </ul>
   <div class="reuse">可套用：判错式标题＋横屏双人短剧排名；转给家人看的选题角度。</div>
+  <div class="skillbox">
+    <div class="skillhead"><span>同款技能包 · 编号 006</span><span><button class="copybtn" onclick="copySkill('zhengjing',this)">一键复制技能</button> <a class="skilllink" href="skills/006-zhengjing.md" target="_blank">技能链接</a></span></div>
+    <pre class="skilltext" id="skill-zhengjing">同款结构技能包 · 编号 006
+样本：正经科普君《你吃了几十年的食用油，大概都选错了！》（2026-10-22，275秒）
+实测数据：转发 8.9万 · 收藏 8648 · 点赞 1.4万 · 评论 1539（视频号播放页读数）
+
+你是一个视频创作智能体。用户给你一个新选题时，严格按这条已验证样本的结构生成同款视频：只学结构与节奏，不搬运原片画面、台词与结论原文。
+
+钩子公式：标题先判错「你吃了几十年的食用油，大概都选错了」，开场超市挑油第一句就是「第一步就挑反了」。
+结构骨架：横屏生成短剧：外星人加年轻人双人演，超市场景逐种油纠错，戏剧化排名讲脂肪酸搭配与控油温；转发是点赞六倍多，极端转发驱动。
+收尾打法：结尾拉回长期账：「可一吃就是20年」，用时间尺度压出转发理由。
+可直接套用：判错式标题＋横屏双人短剧排名；转给家人看的选题角度。
+
+通用硬规则（全部样本共同打法）：
+1. 选题先否定一个万能做法，再给数字个对象，清单可数、可存。
+2. 逐项走固定节奏，观众能预判下一步；每项给可执行解法，不空讲道理。
+3. 同步感靠文字标注加音效卡点：标注出现的那一帧必须有音效落点。
+4. 结尾给完整对照或结论收口，再给一句明确的转存理由。
+5. 数据与结论只用可核实来源，不编数字、不下医疗功效结论。
+交付前自查：钩子前三秒是否成立、逐项节奏是否统一、末帧收口是否齐全、音画字幕是否逐段对位。</pre>
+    <p class="skillnote">用法：点一键复制，把全文粘给任何智能体；或把技能链接发给它，让它打开链接按技能要求生成同款结构视频。</p>
+  </div>
   <div class="imgs"><img loading="lazy" src="frames/zhengjing-a.jpg" alt=""><img loading="lazy" src="frames/zhengjing-b.jpg" alt=""></div>
 </section>
 <section class="detail" id="s-juke">
   <a class="back" href="#">← 返回样本列表</a>
-  <div class="meta">荒诞科普橘 · 2026-10-29 · 253秒</div>
+  <div class="meta">编号 004 · 荒诞科普橘 · 2026-10-29 · 253秒</div>
   <h3>哪种肉营养最高</h3>
   <video controls playsinline preload="none" poster="frames/juke-a.jpg" data-src="clips/juke.mp4"></video>
   <div class="stats"><span class="stat"><b>4.1万</b>转发</span><span class="stat"><b>4219</b>收藏</span><span class="stat"><b>7886</b>点赞</span><span class="stat"><b>413</b>评论</span></div>
@@ -195,10 +318,39 @@ h2{font-family:"Songti SC","Noto Serif SC",serif;font-size:21px;font-weight:600;
     <li><em>收尾</em>给出排名结论收尾（其中医疗建议段不可仿）。</li>
   </ul>
   <div class="reuse">可套用：排名＋对照结构；问题式标题。医疗结论类说法不套用。</div>
+  <div class="skillbox">
+    <div class="skillhead"><span>同款技能包 · 编号 004</span><span><button class="copybtn" onclick="copySkill('juke',this)">一键复制技能</button> <a class="skilllink" href="skills/004-juke.md" target="_blank">技能链接</a></span></div>
+    <pre class="skilltext" id="skill-juke">同款结构技能包 · 编号 004
+样本：荒诞科普橘《哪种肉营养最高》（2026-10-29，253秒）
+实测数据：转发 4.1万 · 收藏 4219 · 点赞 7886 · 评论 413（视频号播放页读数）
+
+你是一个视频创作智能体。用户给你一个新选题时，严格按这条已验证样本的结构生成同款视频：只学结构与节奏，不搬运原片画面、台词与结论原文。
+
+钩子公式：一个问题开场：哪种肉营养最高，排名悬念拉满。
+结构骨架：生成式双人对话，各类肉逐个对比排名；转发是点赞的五倍多，靠「发给家人看」驱动。
+收尾打法：给出排名结论收尾（其中医疗建议段不可仿）。
+可直接套用：排名＋对照结构；问题式标题。医疗结论类说法不套用。
+
+通用硬规则（全部样本共同打法）：
+1. 选题先否定一个万能做法，再给数字个对象，清单可数、可存。
+2. 逐项走固定节奏，观众能预判下一步；每项给可执行解法，不空讲道理。
+3. 同步感靠文字标注加音效卡点：标注出现的那一帧必须有音效落点。
+4. 结尾给完整对照或结论收口，再给一句明确的转存理由。
+5. 数据与结论只用可核实来源，不编数字、不下医疗功效结论。
+交付前自查：钩子前三秒是否成立、逐项节奏是否统一、末帧收口是否齐全、音画字幕是否逐段对位。</pre>
+    <p class="skillnote">用法：点一键复制，把全文粘给任何智能体；或把技能链接发给它，让它打开链接按技能要求生成同款结构视频。</p>
+  </div>
   <div class="imgs"><img loading="lazy" src="frames/juke-a.jpg" alt=""><img loading="lazy" src="frames/juke-b.jpg" alt=""></div>
 </section>
 </div>
 <script>
+function copySkill(id,btn){
+  var t=document.getElementById('skill-'+id).innerText;
+  function done(){var o=btn.textContent;btn.textContent='已复制';setTimeout(function(){btn.textContent=o;},1800);}
+  if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done).catch(function(){fallback();});}
+  else{fallback();}
+  function fallback(){var ta=document.createElement('textarea');ta.value=t;document.body.appendChild(ta);ta.select();try{document.execCommand('copy');done();}catch(e){}document.body.removeChild(ta);}
+}
 function loadVideo(v){
   if(v && !v.getAttribute('src') && v.dataset.src){v.src=v.dataset.src;v.load();}
 }
