@@ -25,6 +25,9 @@ h2{font-family:"Songti SC","Noto Serif SC",serif;font-size:21px;font-weight:600;
 .skilllink{color:#1A1A1A;font-size:12.5px}
 .skilltext{white-space:pre-wrap;word-break:break-word;font-family:inherit;font-size:12.5px;line-height:1.75;color:#33312B;max-height:230px;overflow:auto;margin:14px 0 8px}
 .skillnote{color:#8A8578;font-size:12.5px;line-height:1.7;margin:0}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 22px}
+.chip{background:#fff;border:1px solid #E3DFD2;color:#6E6A5E;border-radius:999px;padding:6px 14px;font-size:13px;cursor:pointer}
+.chip.on{background:#1A1A1A;color:#fff;border-color:#1A1A1A}
 .card .thumb:hover .playhint{opacity:1}
 .cmeta{color:#8A8578;font-size:12.5px;letter-spacing:.06em;margin-top:12px}
 .cdata{font-size:14.5px;margin-top:5px;color:#1A1A1A;font-weight:500}
@@ -57,59 +60,60 @@ h2{font-family:"Songti SC","Noto Serif SC",serif;font-size:21px;font-weight:600;
 <div id="home">
 <h2>样本</h2>
 <p class="sub">按转发＋收藏从高到低排列 · 数据为收录当日公开页面读数 · 卡片左上角是固定编号，沟通对齐报编号即可</p>
+<div class="chips"><button class="chip on" onclick="filterCat('全部',this)">全部</button><button class="chip" onclick="filterCat('食材烹饪',this)">食材烹饪 3</button><button class="chip" onclick="filterCat('清洁日用',this)">清洁日用 1</button><button class="chip" onclick="filterCat('选购营养',this)">选购营养 2</button></div>
 <div class="grid">
-<article class="card" data-id="shenhua">
+<article class="card" data-id="shenhua" data-cat="食材烹饪">
   <div class="thumb" onclick="location.hash='s-shenhua'">
     <video muted loop playsinline preload="none" poster="frames/shenhua-a.jpg" data-src="clips/shenhua.mp4"></video>
     <div class="no">编号 001</div>
     <div class="playhint">点击看详情</div>
   </div>
-  <div class="cmeta">神话研究所 · 2026-10-18</div>
+  <div class="cmeta">神话研究所 · 2026-10-18 · 食材烹饪</div>
   <div class="cdata">转发 10万+ · 收藏 10万+ · 点赞 10万+ · 评论 8473</div>
 </article>
-<article class="card" data-id="tiantian">
+<article class="card" data-id="tiantian" data-cat="食材烹饪">
   <div class="thumb" onclick="location.hash='s-tiantian'">
     <video muted loop playsinline preload="none" poster="frames/tiantian-a.jpg" data-src="clips/tiantian.mp4"></video>
     <div class="no">编号 002</div>
     <div class="playhint">点击看详情</div>
   </div>
-  <div class="cmeta">天天科普一下 · 2026-11-01</div>
+  <div class="cmeta">天天科普一下 · 2026-11-01 · 食材烹饪</div>
   <div class="cdata">转发 10万+ · 收藏 10万+ · 点赞 10万+ · 评论 628</div>
 </article>
-<article class="card" data-id="kepu">
+<article class="card" data-id="kepu" data-cat="清洁日用">
   <div class="thumb" onclick="location.hash='s-kepu'">
     <video muted loop playsinline preload="none" poster="frames/kepu-a.jpg" data-src="clips/kepu.mp4"></video>
     <div class="no">编号 005</div>
     <div class="playhint">点击看详情</div>
   </div>
-  <div class="cmeta">科普来了 · 2026-06-24</div>
+  <div class="cmeta">科普来了 · 2026-06-24 · 清洁日用</div>
   <div class="cdata">转发 10万+ · 收藏 10万+ · 点赞 10万+ · 评论 1052</div>
 </article>
-<article class="card" data-id="yier">
+<article class="card" data-id="yier" data-cat="食材烹饪">
   <div class="thumb" onclick="location.hash='s-yier'">
     <video muted loop playsinline preload="none" poster="frames/yier-a.jpg" data-src="clips/yier.mp4"></video>
     <div class="no">编号 003</div>
     <div class="playhint">点击看详情</div>
   </div>
-  <div class="cmeta">AIGC伊尔 · 2026-10-29</div>
+  <div class="cmeta">AIGC伊尔 · 2026-10-29 · 食材烹饪</div>
   <div class="cdata">转发 10万+ · 收藏 8.1万 · 点赞 7.0万 · 评论 3186</div>
 </article>
-<article class="card" data-id="zhengjing">
+<article class="card" data-id="zhengjing" data-cat="选购营养">
   <div class="thumb" onclick="location.hash='s-zhengjing'">
     <video muted loop playsinline preload="none" poster="frames/zhengjing-a.jpg" data-src="clips/zhengjing.mp4"></video>
     <div class="no">编号 006</div>
     <div class="playhint">点击看详情</div>
   </div>
-  <div class="cmeta">正经科普君 · 2026-10-22</div>
+  <div class="cmeta">正经科普君 · 2026-10-22 · 选购营养</div>
   <div class="cdata">转发 8.9万 · 收藏 8648 · 点赞 1.4万 · 评论 1539</div>
 </article>
-<article class="card" data-id="juke">
+<article class="card" data-id="juke" data-cat="选购营养">
   <div class="thumb" onclick="location.hash='s-juke'">
     <video muted loop playsinline preload="none" poster="frames/juke-a.jpg" data-src="clips/juke.mp4"></video>
     <div class="no">编号 004</div>
     <div class="playhint">点击看详情</div>
   </div>
-  <div class="cmeta">荒诞科普橘 · 2026-10-29</div>
+  <div class="cmeta">荒诞科普橘 · 2026-10-29 · 选购营养</div>
   <div class="cdata">转发 4.1万 · 收藏 4219 · 点赞 7886 · 评论 413</div>
 </article></div>
 <h2>共同打法（样本提炼）</h2>
@@ -128,7 +132,7 @@ h2{font-family:"Songti SC","Noto Serif SC",serif;font-size:21px;font-weight:600;
 
 <section class="detail" id="s-shenhua">
   <a class="back" href="#">← 返回样本列表</a>
-  <div class="meta">编号 001 · 神话研究所 · 2026-10-18 · 203秒</div>
+  <div class="meta">编号 001 · 神话研究所 · 2026-10-18 · 203秒 · 食材烹饪 · 竖屏双人对答</div>
   <h3>料酒不是万能的，五种肉的去腥香料其实不一样</h3>
   <video controls playsinline preload="none" poster="frames/shenhua-a.jpg" data-src="clips/shenhua.mp4"></video>
   <div class="stats"><span class="stat"><b>10万+</b>转发</span><span class="stat"><b>10万+</b>收藏</span><span class="stat"><b>10万+</b>点赞</span><span class="stat"><b>8473</b>评论</span></div>
@@ -142,6 +146,7 @@ h2{font-family:"Songti SC","Noto Serif SC",serif;font-size:21px;font-weight:600;
     <div class="skillhead"><span>同款技能包 · 编号 001</span><span><button class="copybtn" onclick="copySkill('shenhua',this)">一键复制技能</button> <a class="skilllink" href="skills/001-shenhua.md" target="_blank">技能链接</a></span></div>
     <pre class="skilltext" id="skill-shenhua">同款结构技能包 · 编号 001
 样本：神话研究所《料酒不是万能的，五种肉的去腥香料其实不一样》（2026-10-18，203秒）
+分类：食材烹饪 · 形式：竖屏双人对答
 实测数据：转发 10万+ · 收藏 10万+ · 点赞 10万+ · 评论 8473（视频号播放页读数）
 
 你是一个视频创作智能体。用户给你一个新选题时，严格按这条已验证样本的结构生成同款视频：只学结构与节奏，不搬运原片画面、台词与结论原文。
@@ -164,7 +169,7 @@ h2{font-family:"Songti SC","Noto Serif SC",serif;font-size:21px;font-weight:600;
 </section>
 <section class="detail" id="s-tiantian">
   <a class="back" href="#">← 返回样本列表</a>
-  <div class="meta">编号 002 · 天天科普一下 · 2026-11-01 · 59秒</div>
+  <div class="meta">编号 002 · 天天科普一下 · 2026-11-01 · 59秒 · 食材烹饪 · 竖屏动画清单</div>
   <h3>海鲜清洗有妙招，谁还在费劲搓海鲜啊</h3>
   <video controls playsinline preload="none" poster="frames/tiantian-a.jpg" data-src="clips/tiantian.mp4"></video>
   <div class="stats"><span class="stat"><b>10万+</b>转发</span><span class="stat"><b>10万+</b>收藏</span><span class="stat"><b>10万+</b>点赞</span><span class="stat"><b>628</b>评论</span></div>
@@ -178,6 +183,7 @@ h2{font-family:"Songti SC","Noto Serif SC",serif;font-size:21px;font-weight:600;
     <div class="skillhead"><span>同款技能包 · 编号 002</span><span><button class="copybtn" onclick="copySkill('tiantian',this)">一键复制技能</button> <a class="skilllink" href="skills/002-tiantian.md" target="_blank">技能链接</a></span></div>
     <pre class="skilltext" id="skill-tiantian">同款结构技能包 · 编号 002
 样本：天天科普一下《海鲜清洗有妙招，谁还在费劲搓海鲜啊》（2026-11-01，59秒）
+分类：食材烹饪 · 形式：竖屏动画清单
 实测数据：转发 10万+ · 收藏 10万+ · 点赞 10万+ · 评论 628（视频号播放页读数）
 
 你是一个视频创作智能体。用户给你一个新选题时，严格按这条已验证样本的结构生成同款视频：只学结构与节奏，不搬运原片画面、台词与结论原文。
@@ -200,7 +206,7 @@ h2{font-family:"Songti SC","Noto Serif SC",serif;font-size:21px;font-weight:600;
 </section>
 <section class="detail" id="s-kepu">
   <a class="back" href="#">← 返回样本列表</a>
-  <div class="meta">编号 005 · 科普来了 · 2026-06-24 · 51秒</div>
+  <div class="meta">编号 005 · 科普来了 · 2026-06-24 · 51秒 · 清洁日用 · 竖屏动画清单</div>
   <h3>厨具污渍油垢清洁小技巧</h3>
   <video controls playsinline preload="none" poster="frames/kepu-a.jpg" data-src="clips/kepu.mp4"></video>
   <div class="stats"><span class="stat"><b>10万+</b>转发</span><span class="stat"><b>10万+</b>收藏</span><span class="stat"><b>10万+</b>点赞</span><span class="stat"><b>1052</b>评论</span></div>
@@ -214,6 +220,7 @@ h2{font-family:"Songti SC","Noto Serif SC",serif;font-size:21px;font-weight:600;
     <div class="skillhead"><span>同款技能包 · 编号 005</span><span><button class="copybtn" onclick="copySkill('kepu',this)">一键复制技能</button> <a class="skilllink" href="skills/005-kepu.md" target="_blank">技能链接</a></span></div>
     <pre class="skilltext" id="skill-kepu">同款结构技能包 · 编号 005
 样本：科普来了《厨具污渍油垢清洁小技巧》（2026-06-24，51秒）
+分类：清洁日用 · 形式：竖屏动画清单
 实测数据：转发 10万+ · 收藏 10万+ · 点赞 10万+ · 评论 1052（视频号播放页读数）
 
 你是一个视频创作智能体。用户给你一个新选题时，严格按这条已验证样本的结构生成同款视频：只学结构与节奏，不搬运原片画面、台词与结论原文。
@@ -236,7 +243,7 @@ h2{font-family:"Songti SC","Noto Serif SC",serif;font-size:21px;font-weight:600;
 </section>
 <section class="detail" id="s-yier">
   <a class="back" href="#">← 返回样本列表</a>
-  <div class="meta">编号 003 · AIGC伊尔 · 2026-10-29 · 288秒</div>
+  <div class="meta">编号 003 · AIGC伊尔 · 2026-10-29 · 288秒 · 食材烹饪 · 竖屏清单讲解</div>
   <h3>这十种食材要谨慎处理！</h3>
   <video controls playsinline preload="none" poster="frames/yier-a.jpg" data-src="clips/yier.mp4"></video>
   <div class="stats"><span class="stat"><b>10万+</b>转发</span><span class="stat"><b>8.1万</b>收藏</span><span class="stat"><b>7.0万</b>点赞</span><span class="stat"><b>3186</b>评论</span></div>
@@ -250,6 +257,7 @@ h2{font-family:"Songti SC","Noto Serif SC",serif;font-size:21px;font-weight:600;
     <div class="skillhead"><span>同款技能包 · 编号 003</span><span><button class="copybtn" onclick="copySkill('yier',this)">一键复制技能</button> <a class="skilllink" href="skills/003-yier.md" target="_blank">技能链接</a></span></div>
     <pre class="skilltext" id="skill-yier">同款结构技能包 · 编号 003
 样本：AIGC伊尔《这十种食材要谨慎处理！》（2026-10-29，288秒）
+分类：食材烹饪 · 形式：竖屏清单讲解
 实测数据：转发 10万+ · 收藏 8.1万 · 点赞 7.0万 · 评论 3186（视频号播放页读数）
 
 你是一个视频创作智能体。用户给你一个新选题时，严格按这条已验证样本的结构生成同款视频：只学结构与节奏，不搬运原片画面、台词与结论原文。
@@ -272,7 +280,7 @@ h2{font-family:"Songti SC","Noto Serif SC",serif;font-size:21px;font-weight:600;
 </section>
 <section class="detail" id="s-zhengjing">
   <a class="back" href="#">← 返回样本列表</a>
-  <div class="meta">编号 006 · 正经科普君 · 2026-10-22 · 275秒</div>
+  <div class="meta">编号 006 · 正经科普君 · 2026-10-22 · 275秒 · 选购营养 · 横屏双人短剧</div>
   <h3>你吃了几十年的食用油，大概都选错了！</h3>
   <video controls playsinline preload="none" poster="frames/zhengjing-a.jpg" data-src="clips/zhengjing.mp4"></video>
   <div class="stats"><span class="stat"><b>8.9万</b>转发</span><span class="stat"><b>8648</b>收藏</span><span class="stat"><b>1.4万</b>点赞</span><span class="stat"><b>1539</b>评论</span></div>
@@ -286,6 +294,7 @@ h2{font-family:"Songti SC","Noto Serif SC",serif;font-size:21px;font-weight:600;
     <div class="skillhead"><span>同款技能包 · 编号 006</span><span><button class="copybtn" onclick="copySkill('zhengjing',this)">一键复制技能</button> <a class="skilllink" href="skills/006-zhengjing.md" target="_blank">技能链接</a></span></div>
     <pre class="skilltext" id="skill-zhengjing">同款结构技能包 · 编号 006
 样本：正经科普君《你吃了几十年的食用油，大概都选错了！》（2026-10-22，275秒）
+分类：选购营养 · 形式：横屏双人短剧
 实测数据：转发 8.9万 · 收藏 8648 · 点赞 1.4万 · 评论 1539（视频号播放页读数）
 
 你是一个视频创作智能体。用户给你一个新选题时，严格按这条已验证样本的结构生成同款视频：只学结构与节奏，不搬运原片画面、台词与结论原文。
@@ -308,7 +317,7 @@ h2{font-family:"Songti SC","Noto Serif SC",serif;font-size:21px;font-weight:600;
 </section>
 <section class="detail" id="s-juke">
   <a class="back" href="#">← 返回样本列表</a>
-  <div class="meta">编号 004 · 荒诞科普橘 · 2026-10-29 · 253秒</div>
+  <div class="meta">编号 004 · 荒诞科普橘 · 2026-10-29 · 253秒 · 选购营养 · 竖屏双人对话</div>
   <h3>哪种肉营养最高</h3>
   <video controls playsinline preload="none" poster="frames/juke-a.jpg" data-src="clips/juke.mp4"></video>
   <div class="stats"><span class="stat"><b>4.1万</b>转发</span><span class="stat"><b>4219</b>收藏</span><span class="stat"><b>7886</b>点赞</span><span class="stat"><b>413</b>评论</span></div>
@@ -322,6 +331,7 @@ h2{font-family:"Songti SC","Noto Serif SC",serif;font-size:21px;font-weight:600;
     <div class="skillhead"><span>同款技能包 · 编号 004</span><span><button class="copybtn" onclick="copySkill('juke',this)">一键复制技能</button> <a class="skilllink" href="skills/004-juke.md" target="_blank">技能链接</a></span></div>
     <pre class="skilltext" id="skill-juke">同款结构技能包 · 编号 004
 样本：荒诞科普橘《哪种肉营养最高》（2026-10-29，253秒）
+分类：选购营养 · 形式：竖屏双人对话
 实测数据：转发 4.1万 · 收藏 4219 · 点赞 7886 · 评论 413（视频号播放页读数）
 
 你是一个视频创作智能体。用户给你一个新选题时，严格按这条已验证样本的结构生成同款视频：只学结构与节奏，不搬运原片画面、台词与结论原文。
@@ -344,6 +354,13 @@ h2{font-family:"Songti SC","Noto Serif SC",serif;font-size:21px;font-weight:600;
 </section>
 </div>
 <script>
+function filterCat(cat,btn){
+  document.querySelectorAll('.chip').forEach(function(b){b.classList.remove('on');});
+  btn.classList.add('on');
+  document.querySelectorAll('.card').forEach(function(c){
+    c.style.display=(cat==='全部'||c.dataset.cat===cat)?'block':'none';
+  });
+}
 function copySkill(id,btn){
   var t=document.getElementById('skill-'+id).innerText;
   function done(){var o=btn.textContent;btn.textContent='已复制';setTimeout(function(){btn.textContent=o;},1800);}
